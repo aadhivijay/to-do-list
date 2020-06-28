@@ -1,0 +1,50 @@
+.list-cont {
+    overflow: hidden;
+}
+
+.item-card {
+    background-color: var(--white);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.item-card:hover {
+    border: 1px solid var(--primary);
+    color: var(--secondary);
+}
+
+.selected-card {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+.item-card:hover.selected-card {
+    color: var(--white);
+}
+
+.selected-card .item-description {
+    color: var(--white);
+}
+
+.checkbox-cont {
+    width: 10%;
+}
+
+.detail-cont {
+    width: 90%;
+}
+
+.item-title {
+    font-size: 16px;
+}
+
+.item-description {
+    font-size: 14px;
+    color: var(--secondary);
+}
+
+.item-title > b, .item-description > i {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

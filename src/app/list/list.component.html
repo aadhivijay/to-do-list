@@ -1,0 +1,35 @@
+<div class="flex flex-col list-cont">
+
+    <ng-container *ngFor="let item of list">
+
+        <div class="flex item-outer element-pad">
+
+            <div class="flex full-width item-card"
+                [ngClass]="{ 'selected-card': selectedItem && item.id === selectedItem.id }"
+                (click)="openItem(item)">
+
+                <div class="flex element-pad checkbox-cont">
+
+                    <input type="checkbox" value="Completed" [(ngModel)]="item.status" (click)="statusToggle(item)">
+    
+                </div>
+    
+                <div class="flex flex-col element-pad full-width detail-cont">
+    
+                    <div class="flex element-pad item-title">
+                        <b>{{ item.title }}</b>
+                    </div>
+    
+                    <div class="flex element-pad item-description">
+                        <i>{{ item.description }}</i>
+                    </div>
+    
+                </div>
+
+            </div>
+
+        </div>
+
+    </ng-container>
+
+</div>

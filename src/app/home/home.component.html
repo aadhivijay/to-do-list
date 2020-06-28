@@ -1,0 +1,26 @@
+<div class="flex flex-col home-cont">
+
+    <app-title-bar [showAction]="showAction" (action)="titleAction($event)"></app-title-bar>
+
+    <div class="flex body-cont">
+
+        <!-- desktop -->
+        <div class="flex full-width">
+
+            <div class="list-cont" #listCont>
+
+                <app-list [list]="list" [selectedItem]="item" (action)="listAction($event)"></app-list>
+
+            </div>
+
+            <div class="item-cont" #itemCont>
+
+                <app-item [item]="item" (action)="itemAction($event)"></app-item>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

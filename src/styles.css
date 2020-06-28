@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+:root {
+    --primary: #9CD336;
+    --secondary: #5D737E;
+    --color: #2E3138;
+    --disabled: #D3D0CB;
+    --white: #FAFAFF;
+}
+
+textarea, input, button, body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    color: var(--color);
+}
+
+button {
+    padding: 6px 14px;
+    min-width: 70px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type='checkbox'] {
+    width: 16px;
+    height: 16px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.jus-center {
+    justify-content: center;
+}
+
+.main-pad {
+    padding: 6px 14px;
+}
+
+.element-pad {
+    padding: 4px;
+}
+
+.pri-button {
+    background-color: var(--white);
+    color: var(--color);
+}
+
+.sec-button {
+    background-color: var(--secondary);
+    color: var(--white);
+}

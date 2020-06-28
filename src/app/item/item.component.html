@@ -1,0 +1,38 @@
+<div class="flex item-cont">
+
+    <div class="flex main-pad full-width flex-col" *ngIf="item">
+
+        <!-- title -->
+        <div class="flex element-pad">
+            <input type="text" class="title" placeholder="Title" [(ngModel)]="item.title">
+        </div>
+
+        <!-- status -->
+        <div class="flex element-pad status-cont">
+            <input type="checkbox" class="checkbox" [(ngModel)]="item.status" value="Completed" (click)="statusToggle()">
+            <label>{{ item.status ? 'Completed' : 'Not completed' }}</label>
+        </div>
+
+        <!-- description -->
+        <div class="flex element-pad">
+            <textarea maxlength="1000" rows="15" class="description" placeholder="description" [(ngModel)]="item.description"></textarea>
+        </div>
+
+        <!-- delete -->
+        <div class="flex element-pad">
+            <button class="sec-button" (click)="delete()">
+                Delete
+            </button>
+        </div>
+
+    </div>
+
+    <div class="flex empty-cont" (click)="addNew()" *ngIf="!item">
+
+        <div class="flex empty-add">
+            + add new
+        </div>
+
+    </div>
+
+</div>
